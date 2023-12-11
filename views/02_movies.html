@@ -1,0 +1,14 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+</head>
+
+<body>
+    <h1>Infinite scroll example</h1>
+    <table>
+        <tr hx-get="/api/movies?page=0" hx-trigger="revealed" hx-swap="afterend">
+        </tr>
+    </table>
+
+</html>

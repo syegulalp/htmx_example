@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+</head>
+
+<body>
+    <h1>Type to search example</h1>
+
+    <input class="form-control" type="search" name="search" placeholder="Type to search for a movie by title"
+    
+        hx-post="/api/movie-search"
+        hx-target="#search-results"
+        hx-trigger="keyup changed delay:250ms, search"  
+        hx-indicator=".htmx-indicator"
+    
+    >
+
+    <div class="htmx-indicator">Searching ...</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody id="search-results">
+        </tbody>
+    </table>
+
+</html>

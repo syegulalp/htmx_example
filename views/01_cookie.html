@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+</head>
+
+<body>
+    <button 
+    hx-trigger="click"
+    hx-post="/cookie"
+    hx-target="#cookie"
+    hx-swap="innerHTML"     
+    >Click me for a cookie!</button>
+    <hr />
+    <div id="cookie"></div>
+
+</html>

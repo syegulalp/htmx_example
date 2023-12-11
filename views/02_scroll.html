@@ -1,0 +1,9 @@
+% s = page*50
+% for idx, m in enumerate(movies):
+<tr>
+    <td>{{idx+s+1}}</td>
+    <td>{{m[0]}}</td>
+    <td>{{m[1]}}</td>
+</tr>
+% end
+<tr hx-get="/api/movies?page={{page+1}}" hx-trigger="revealed" hx-swap="afterend"></tr>
